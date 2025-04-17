@@ -519,7 +519,7 @@ importFacts() {
 
 checkBuildLocally() {
   local system extraPlatforms machineSystem
-  system="$(nix --extra-experimental-features 'nix-command flakes' config show system)"
+  system="$(nix --extra-experimental-features 'nix-command flakes' show-config system)"
   extraPlatforms="$(nix --extra-experimental-features 'nix-command flakes' config show extra-platforms)"
 
   if [[ $# -gt 0 ]]; then
